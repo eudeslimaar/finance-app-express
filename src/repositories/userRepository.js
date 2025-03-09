@@ -14,4 +14,12 @@ const createUser = async (user) => {
   return { id: result.insertId };
 };
 
-export default { getAllUsers, createUser };
+const getUserByEmailOrUsername = async (email, username) => {
+  const [rows] = await pool.query(
+    "SELECT * FROM users WHERE email = ? OR username = ?",
+    [email, username]
+  );
+  return rows.length > 0 ? rows[0] : null;
+};
+
+export default { getAllUsers, createUser, getUserByEmailOrUsername };
