@@ -5,11 +5,22 @@ Este arquivo documenta todas as mudanças significativas do projeto.
 O formato segue as recomendações de [Keep a Changelog](https://keepachangelog.com/).
 
 ---
+
+## [0.1.2] - 2025-03-09
+### Melhorias
+- **Refatorado `userRepository.js`** para usar o modelo `User` diretamente, sem desestruturação manual e garantindo que o campo `password` e seja exporto na API.
+- **Atualizada a estrutura do banco de dados** para melhor rastreabilidade de mudanças dos usuários.
+- **O campo `password` não é mais exposto na API**, garantindo maior segurança.
+
+---
+
+
 ## [0.1.1] - 2025-03-09
 
 ### Corrigido
 - Correção no `userRepository.js`: função `getUserByEmailOrUsername` agora implementada corretamente.
 
+---
 
 ## [0.1.0] - 2025-03-09
 
@@ -19,3 +30,5 @@ O formato segue as recomendações de [Keep a Changelog](https://keepachangelog.
 - **Serviço de usuários (`userService.js`)** para validações e regras de negócio.
 - **Controlador de usuários (`userController.js`)** para gerenciar as requisições.
 - **Rotas de usuários (`userRoutes.js`)** para definir os endpoints da API.
+
+---
