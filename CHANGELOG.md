@@ -10,7 +10,6 @@ O formato segue as recomendações de [Keep a Changelog](https://keepachangelog.
 ### Melhorias
 - **Refatorado `userRepository.js`** para usar o modelo `User` diretamente, sem desestruturação manual e garantindo que o campo `password` e seja exporto na API.
 - **Atualizada a estrutura do banco de dados** para melhor rastreabilidade de mudanças dos usuários.
-- **O campo `password` não é mais exposto na API**, garantindo maior segurança.
 
 ---
 
